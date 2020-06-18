@@ -31,7 +31,7 @@ export default class UserForm extends Component {
           <div className="formGroup">
             <label>
               <span className="visuallyHidden">
-                {t("form_name_placeholder")}
+                {t("form_name_label")}
               </span>
               <input
                 className="formControl"
@@ -39,7 +39,7 @@ export default class UserForm extends Component {
                 name="name"
                 value={name}
                 placeholder={
-                  namePlaceholder ? namePlaceholder : t("form_email_label")
+                  namePlaceholder ? namePlaceholder : t("form_name_placeholder")
                 }
                 autocapitalize="off"
                 required
@@ -52,7 +52,7 @@ export default class UserForm extends Component {
         {page.email && (
           <div className="formGroup">
             <label>
-              <span className="visuallyHidden">{t("form_name_label")}</span>
+              <span className="visuallyHidden">{t("form_email_label")}</span>
               <input
                 className="formControl"
                 type="email"
