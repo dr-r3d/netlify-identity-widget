@@ -127,7 +127,7 @@ store.completeExternalLogin = action(function completeExternalLogin(params) {
 store.signup = action(function signup(name, email, password) {
   store.startAction();
   return store.gotrue
-    .signup(email, password, { full_name: name })
+    .signup(email, password, { full_name: name, origin: 'app' })
     .then(
       action(() => {
         if (store.settings.autoconfirm) {
